@@ -1,0 +1,21 @@
+package Swing;
+import java.awt.*;        // Using AWT layouts
+import java.awt.event.*;  // Using AWT event classes and listener interfaces
+import javax.swing.*; 
+public class Swing extends JFrame implements ActionListener{
+	private JLabel label;
+	private JButton button;
+	
+	public Swing() {
+		label = new JLabel();
+		label.setText("Hello World!");
+		
+		add(label);
+		setTitle("My First Program");
+		button = new JButton();  
+		button.setText("Klik me");  button.addActionListener(this);
+
+		setVisible(true);  
+		setSize(300, 200);
+	}
+}

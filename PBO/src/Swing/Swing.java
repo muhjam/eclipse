@@ -1,0 +1,20 @@
+package Swing;
+import java.awt.*;        // Using AWT layouts
+import java.awt.event.*;  // Using AWT event classes and listener interfaces
+import javax.swing.*; 
+public class Swing extends JFrame{
+	private JLabel label;
+	
+	public Swing() {
+		label = new JLabel();
+		label.setText("Hello World!");
+		
+		add(label);
+		setTitle("My First Program");
+
+		add(label, BorderLayout.CENTER); 
+
+		setVisible(true);  
+		setSize(300, 200);
+	}
+}

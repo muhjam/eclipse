@@ -1,0 +1,20 @@
+package List;
+
+public class MainList {
+	public static void main(String[] args) {
+		StrukturList List= new StrukturList();
+	
+		List.addTail(4);
+		List.addTail(3);
+		List.addTail(7);
+		List.addTail(8);
+		List.addTail(1);
+		List.addTail(9);
+		
+		List.displayElement();
+		System.out.println(List.size());
+		
+		List.removeAll();
+		List.displayElement();
+	}	
+}

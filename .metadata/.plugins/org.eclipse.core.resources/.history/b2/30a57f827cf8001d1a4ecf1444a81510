@@ -1,0 +1,99 @@
+package Stack;
+
+import java.util.*;
+
+import List.Node;
+
+public class StrukturStack {
+	private int[] array;
+	private int capacity;
+	private int top;
+	
+	public final int min = -1;
+	
+
+	 
+	 public StrukturStack(int capacity) {
+		 array = new int[capacity];
+		 this.capacity = capacity;
+		 top = min;
+	 }
+	
+	 boolean isEmpty () {
+			return (top == min);
+		}
+	 
+	 boolean isFull () {
+			return (top == capacity);
+		}
+	 
+	 public void push(int data) {
+		 if(isFull()) {
+			 System.out.println("Stack Penuh");
+		 }else {
+			 top++;
+			 array[top]=data;
+		 }
+	 }
+	 
+	 public int pop() {
+		 int temp=0;
+		 if(isEmpty()) {
+			 System.out.println("Stack Kosong");
+		 }else {
+			 temp=array[top];
+			 top=top-1;
+		 }
+		 return temp;
+	 }
+	 
+		void displayElement() {
+			for(int i=top;i >= 0;i--) {
+				System.out.print(array[i] + " ");
+			}
+			System.out.println();
+		}
+	 
+		public int size() {	
+			return top+1;
+		}
+		
+		public int top() {	
+			return top != -1 ? array[top]:1;
+		}
+	 
+		public static void main(String[] args) {
+			System.out.println("LATIHAN!");
+			StrukturStack Stack = new StrukturStack(3); 
+			System.out.println("Size: " + Stack.size());
+			System.out.println("Empty: " + Stack.isEmpty());
+			System.out.println("Full: " + Stack.isFull());
+			System.out.println("Top: " + Stack.top());
+			System.out.print("Element from TOP: ");
+			Stack.displayElement();
+			
+			System.out.println("#Melakukan push 3x");
+			Stack.push(2);
+			Stack.push(4);
+			Stack.push(1);
+			System.out.println("push 2, push 3, push 1");
+			System.out.println("Size: " + Stack.size());
+			System.out.println("Empty: " + Stack.isEmpty());
+			System.out.println("Full: " + Stack.isFull());
+			System.out.println("Top: " + Stack.top());
+			System.out.print("Element from TOP: ");
+			Stack.displayElement();
+			System.out.println("");
+			
+			System.out.println("TUGAS!");
+			System.out.println("#Melakukan pop 1x");
+			Stack.pop();
+			System.out.println("Size: " + Stack.size());
+			System.out.println("Empty: " + Stack.isEmpty());
+			System.out.println("Full: " + Stack.isFull());
+			System.out.println("Top: " + Stack.top());
+			System.out.print("Element from TOP: ");
+			Stack.displayElement();
+		}
+}
+		

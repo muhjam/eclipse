@@ -1,0 +1,17 @@
+package test;
+
+import java.util.*;
+
+public class Mahasiswa {
+	String NRP, Nama;
+	double UTS, UAS, Prak, Quiz, Tugas, Hadir, NA;
+	char Indeks;
+	
+	Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		// MAIN PROGRAM
+
+	}
+
+}

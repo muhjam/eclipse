@@ -1,0 +1,60 @@
+package Stack;
+import java.util.*;
+public class StrukturStack {
+	private int[] array;
+	private int capacity;
+	private int top;
+	
+	public final int min = -1;
+	
+	 public StrukturStack(int capacity) {
+		 super();
+		 array = new int[capacity];
+		 this.capacity = capacity;
+		 top = min;
+	 }
+	
+	 boolean isEmpty () {
+			return (top == min);
+		}
+	 
+	 boolean isFull () {
+			return (top == capacity);
+		}
+	 
+	 public void push(int data) {
+		 if(isFull()) {
+			 System.out.println("Stack Penuh");
+		 }else {
+			 top++;
+			 array[top]=data;
+		 }
+	 }
+	 
+	 public int pop() {
+		 int temp=0;
+		 if(isEmpty()) {
+			 System.out.println("Stack Kosong");
+		 }else {
+			 temp=array[top];
+			 top=top-1;
+		 }
+		 return temp;
+	 }
+	 
+		void displayElement() {
+			for(int i=top;i >= 0;i--) {
+				System.out.print(array[i] + " ");
+			}
+			System.out.println();
+		}
+	 
+		public int size() {	
+			return top+1;
+		}
+		
+		public int top() {	
+			return top != -1 ? array[top]:1;
+		}
+}
+		

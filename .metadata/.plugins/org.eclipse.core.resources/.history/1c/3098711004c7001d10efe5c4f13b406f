@@ -1,0 +1,16 @@
+package List;
+
+public class MainList {
+	public static void main(String[] args) {
+		StrukturList List= new StrukturList();
+	
+		List.addTail(5);
+		List.addTail(4);
+		List.addTail(6);
+		
+		List.displayElement();
+		System.out.println(List.find(6));
+
+		List.displayElement();
+	}	
+}
